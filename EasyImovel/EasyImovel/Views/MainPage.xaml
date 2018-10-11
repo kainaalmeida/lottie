@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             x:Class="EasyImovel.Views.MainPage"
+             NavigationPage.HasNavigationBar="True">
+
+    <NavigationPage.TitleView>
+        
+            <Label Text="EasyImovel" FontSize="Medium" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <googleMaps:Map x:Name="maps" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <googleMaps:Map.Behaviors>
+                <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
+                <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
+
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.05,1,0.1" Padding="10">
+            <SearchBar BackgroundColor="White"/>
+        </StackLayout>
+
+
+        <StackLayout 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,1,.14,.17">
+
+            <Button Image="baseline_add_white_24.png"
+                Command="{Binding CadastroCmd}"
+                BackgroundColor="#62397F"
+                TextColor="White"
+                BorderRadius="50"
+                HeightRequest="50"
+                WidthRequest="50"/>
+        </StackLayout>
+        
+
+    </AbsoluteLayout>
+
+</ContentPage>

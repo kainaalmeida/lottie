@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             xmlns:customs="clr-namespace:EasyImovel.Renderer"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="EasyImovel.Views.LoginPage">
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <Image Source="fundo.jpg" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,1"/>
+
+
+        <forms:AnimationView 
+            x:Name="loginAnimate"
+	        Grid.Row="1"
+	        Animation="shy_wolf.json" 
+	        Loop="False" 
+	        AutoPlay="False"
+            Speed="0.5"
+	        PlaybackStartedCommand="{Binding PlayingCommand}"
+	        PlaybackFinishedCommand="{Binding FinishedCommand}" 
+	        ClickedCommand="{Binding ClickedCommand}"
+	        VerticalOptions="FillAndExpand" 
+	        HorizontalOptions="FillAndExpand" 
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds=".5,.05,.3,.3"/>
+
+
+        <customs:KAEntry Placeholder="Email" 
+               PlaceholderColor="White"
+               TextColor="White"
+                         TextChanged="KAEntry_TextChanged"
+               Text="{Binding Email}"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds=".5,.3,.8,.1"/>
+
+        <customs:KAEntry Placeholder="Password" 
+               PlaceholderColor="White"
+               TextColor="White"
+                         TextChanged="KAEntry_TextChanged_1"
+               IsPassword="True"
+               Text="{Binding Senha}"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds=".5,.45,.8,.1"/>
+
+        
+
+        <Button Text="ENTRAR"
+                
+                Style="{StaticResource buttonStyle}"
+                Command="{Binding LoginCmd}"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.8,.8,.1">
+        </Button>
+
+        <forms:AnimationView 
+            IsVisible="{Binding IsBusy}"
+	        x:Name="animationView" 
+	        Grid.Row="1"
+	        Animation="hourglass.json" 
+	        Loop="True" 
+	        AutoPlay="True"
+	        PlaybackStartedCommand="{Binding PlayingCommand}"
+	        PlaybackFinishedCommand="{Binding FinishedCommand}" 
+	        ClickedCommand="{Binding ClickedCommand}"
+	        VerticalOptions="FillAndExpand" 
+	        HorizontalOptions="FillAndExpand" 
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds=".5,.65,.3,.3"/>
+
+    </AbsoluteLayout>
+
+</ContentPage>

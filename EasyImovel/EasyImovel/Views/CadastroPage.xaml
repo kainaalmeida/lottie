@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:customs="clr-namespace:EasyImovel.Renderer"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="EasyImovel.Views.CadastroPage">
+
+    <NavigationPage.TitleView>
+        <Label Text="EasyImovel" FontSize="Medium" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <Image Source="fundo.jpg" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,1"/>
+
+        <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.05,.8,.7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <customs:KAEntry 
+                Grid.Column="0"
+                Placeholder="Nº Quartos"
+                FontSize="Small"
+                PlaceholderColor="White"/>
+
+            <customs:KAEntry 
+                Grid.Column="1"
+                Placeholder="Nº Banheiros"
+                FontSize="Small"
+                PlaceholderColor="White"/>
+            
+            <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Vender" TextColor="White" HorizontalOptions="Start"/>
+                <Switch IsToggled="{Binding Vender}" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Garagem" TextColor="White" HorizontalOptions="Start"/>
+                <Switch IsToggled="{Binding Garagem}" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Button Image="baseline_add_a_photo_white_24.png" 
+                    Grid.Row="2" 
+                    Grid.Column="0" 
+                    Command="{Binding TakeCmd}"
+                    Style="{StaticResource buttonStyle}"/>
+
+            <Button Image="baseline_photo_album_white_24.png" 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Command="{Binding PickCmd}"
+                    Style="{StaticResource buttonStyle}"/>
+
+            <!--<BoxView Grid.ColumnSpan="2" Grid.Row="4" Color="White" VerticalOptions="FillAndExpand"/>-->
+            <Image Source="{Binding Img01}" Grid.Row="4" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"/>
+
+        </Grid>
+
+        
+        
+
+        
+
+
+        <Button Text="CADASTRAR"
+                Style="{StaticResource buttonStyle}"
+                Command="{Binding LoginCmd}"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.9,.8,.1">
+        </Button>
+
+    </AbsoluteLayout>
+
+</ContentPage>

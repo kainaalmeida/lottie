@@ -1,0 +1,16 @@
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\bin\Debug\netstandard2.0\EasyImovel.deps.json
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\bin\Debug\netstandard2.0\EasyImovel.dll
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\bin\Debug\netstandard2.0\EasyImovel.pdb
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\Views\CadastroPage.xaml.g.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.csproj.CoreCompileInputs.cache
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.AssemblyMetadataInputs.cache
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.AssemblyMetadata.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.AssemblyInfoInputs.cache
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.AssemblyInfo.cs
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.dll
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.pdb
+C:\Users\Kaina\source\repos\EasyImovel\EasyImovel\EasyImovel\obj\Debug\netstandard2.0\EasyImovel.csprojAssemblyReference.cache
